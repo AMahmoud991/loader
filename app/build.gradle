@@ -35,9 +35,11 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44"
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.AMahmoud991:loader:develop-SNAPSHOT'
 
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(path: ':loaderlib')
+    testImplementation 'org.amshove.kluent:kluent-android:1.30'
+    testImplementation "org.mockito:mockito-core:2.8.9"
+    testImplementation 'androidx.arch.core:core-testing:2.0.0'
+
 }

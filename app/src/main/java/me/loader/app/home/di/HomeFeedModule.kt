@@ -24,11 +24,9 @@ val homeFeedModule = Kodein.Module(name = "homeFeedModule") {
     bind<HomeFeedDataSource>("homeFeedRemoteDataSource") with singleton {
         HomeFeedRemoteDataSource(instance("jsonArrayParser"),instance())
     }
-    bind<HomeFeedDataSource>("homeFeedLocalDataSource") with singleton {
-        HomeFeedLocalDataSource()
-    }
+
     bind<HomeFeedDataSource>("homeFeedDataSource") with singleton {
-        HomeFeedRepository(instance("homeFeedRemoteDataSource"),instance("homeFeedLocalDataSource"))
+        HomeFeedRepository(instance("homeFeedRemoteDataSource"))
     }
     constant( "homeFeedUrl") with "http://pastebin.com/raw/wgkJgazE"
 
