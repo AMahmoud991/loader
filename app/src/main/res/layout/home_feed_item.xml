@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:card_view="http://schemas.android.com/tools"
+	android:id="@+id/card_view"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="16dp"
+	card_view:cardCornerRadius="8dp"
+	card_view:cardUseCompatPadding="true">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/container_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:focusable="true"
+		android:foreground="?android:attr/selectableItemBackground">
+
+		<me.loader.loaderlib.widget.LoaderImageView
+			android:id="@+id/userImage"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:scaleType="centerCrop"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/userName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/userImage"
+			android:background="#1976D2"
+			android:gravity="center_horizontal"
+			android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+			android:textColor="#ffffff"
+			android:textSize="13sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/userImage" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
